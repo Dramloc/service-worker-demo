@@ -1,6 +1,6 @@
 {
-	"name": "Supercharged",
-	"short_name": "Supercharged",
+	"name": "Service worker Demo",
+	"short_name": "SW Demo",
 	"icons": [
 		{
 			"src": "assets/icons/android-chrome-192x192.png",
