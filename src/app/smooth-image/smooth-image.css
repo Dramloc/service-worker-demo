@@ -1,0 +1,8 @@
+.smooth-image--hidden {
+  opacity: 0;
+}
+
+.smooth-image--animatable {
+  will-change: opacity;
+  transition: opacity 375ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}

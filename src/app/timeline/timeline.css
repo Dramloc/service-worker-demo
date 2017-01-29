@@ -1,0 +1,112 @@
+.timeline {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  border-right: 2px solid #B3E5FC;
+  border-left: 2px solid #B3E5FC;
+}
+
+@media only screen and (min-width: 960px) {
+  .timeline::before {
+    margin-left: -2px;
+    left: 50%;
+  }
+}
+
+.timeline__event {
+  position: relative;
+}
+
+@media only screen and (max-width: 959px) {
+  .timeline__event > * {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .timeline__event {
+    width: 50%;
+  }
+
+  .timeline__event:nth-child(odd) > * {
+    margin-right: 30px;
+  }
+
+  .timeline__event:nth-child(even) {
+    margin-left: 50%;
+  }
+
+  .timeline__event:nth-child(even) > * {
+    margin-left: 30px;
+  }
+}
+
+.timeline__event::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 18px;
+  margin-left: -6px;
+  background: #00B0FF;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  width: 16px;
+  height: 16px;
+}
+
+@media only screen and (min-width: 960px) {
+  .timeline__event:nth-child(odd)::before {
+    right: 0;
+    margin-right: -8px;
+  }
+
+  .timeline__event:nth-child(even)::before {
+    left: 0;
+    margin-left: -8px;
+  }
+}
+
+.timeline__event > *::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 30px;
+  background-color: #fff;
+  top: 12px;
+  left: 30px;
+}
+
+.timeline__event > *::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(0,0,0,.2), 1px 1px 1px 0 rgba(0,0,0,.14), 2px 2px 1px -1px rgba(0,0,0,.12);
+  top: 18px;
+  left: 24px;
+  transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 960px) {
+  .timeline__event:nth-child(odd) > *::before {
+    left: 100%;
+    margin-left: -38px;
+  }
+
+  .timeline__event:nth-child(odd) > *::after {
+    left: 100%;
+    margin-left: -44px;
+  }
+}

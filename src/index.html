@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+  <title>Service worker &middot; Demo</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Supercharged">
+  <meta name="application-name" content="Supercharged">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="app/side-nav/side-nav.css" rel="stylesheet">
+  <link href="app/toolbar/toolbar.css" rel="stylesheet">
+  <link href="app/cards/cards.css" rel="stylesheet">
+  <link href="app/timeline/timeline.css" rel="stylesheet">
+  <link href="app/smooth-image/smooth-image.css" rel="stylesheet">
+  <link href="app/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <aside id="side-nav" class="side-nav">
+    <nav id="side-nav-inner" class="side-nav__inner">
+      <header class="side-nav__header">
+        Service worker &middot; Demo
+      </header>
+      <ul class="side-nav__content">
+        <li class="side-nav__menu-item side-nav__menu-item--selected">Beers</li>
+        <li class="side-nav__menu-item">Recipes</li>
+        <li class="side-nav__menu-item">About</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <header id="toolbar" class="toolbar">
+    <button id="side-nav-toggle" class="toolbar__menu-toggle material-icons">menu</button>
+  </header>
+
+  <main id="content" class="content">
+    <section>
+      <ol id="timeline" class="timeline"></ol>
+    </section>
+  </main>
+
+  <template id="timeline-event-template">
+    <li class="timeline__event">
+      <div class="card">
+        <div class="card__header">
+          <div class="card__avatar">
+            <i class="material-icons avatar">person</i>
+          </div>
+          <div class="card__header-text">
+            <span class="card__header-title"></span>
+            <span class="card__header-subtitle"></span>
+          </div>
+        </div>
+        <div class="card__rich-media"></div>
+        <div class="card__content">
+          <div class="card__primary-title">
+            <h1 class="card__title"></h1>
+            <h2 class="card__subtitle"></h2>
+          </div>
+          <p class="card__subtext"></p>
+          <div class="card__actions">
+            <button class="card__action"><i class="material-icons">favorite</i></button>
+            <button class="card__action"><i class="material-icons">comment</i></button>
+            <span class="flex-grow"></span>
+            <button class="card__action"><i class="material-icons">expand_more</i></button>
+          </div>
+          <p class="card__supporting-text card__supporting-text--hidden">
+          </p>
+        </div>
+      </div>
+    </li>
+  </template>
+  <script src="app/smooth-image/smooth-image.js"></script>
+  <script src="app/side-nav/side-nav.js"></script>
+  <script src="app/toolbar/toolbar.js"></script>
+  <script src="app/app.js"></script>
+  <script src="register-service-worker.js"></script>
+</body>
+
+</html>
