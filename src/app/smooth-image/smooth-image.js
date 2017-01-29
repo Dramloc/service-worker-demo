@@ -36,7 +36,3 @@ class SmoothImage {
     this.image.classList.remove('smooth-image--animatable');
   }
 }
-
-document.querySelectorAll('img').forEach((image) => {
-  new SmoothImage(image); // eslint-disable-line no-new
-});

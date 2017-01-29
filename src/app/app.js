@@ -22,6 +22,7 @@ function fetchBeers() {
           const richMediaImage = document.createElement('img');
           richMediaImage.src = `assets/images/${beer.id % 4}.jpg`;
           richMediaImage.alt = beer.name;
+          new SmoothImage(richMediaImage);
           richMedia.appendChild(richMediaImage);
 
           const headerTitle = fragment.querySelector('.card__header-title');
