@@ -37,23 +37,23 @@ function clearCache() {
 self.addEventListener('install', (event) => {
   event.waitUntil(
     cacheAll()
-      .then(() => self.skipWaiting()));
+    .then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     clearCache()
-      .then(() => self.clients.claim()));
+    .then(() => self.clients.claim()));
 });
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.open(cacheName)
-      .then(cache =>
-        cache.match(event.request).then((response) => {
-          if (response) {
-            return response;
-          }
-          return fetch(event.request);
-        })));
+    .then(cache =>
+      cache.match(event.request).then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      })));
 });

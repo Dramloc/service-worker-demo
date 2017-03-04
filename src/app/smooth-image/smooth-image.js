@@ -1,4 +1,4 @@
-class SmoothImage {
+class SmoothImage { // eslint-disable-line no-unused-vars
   constructor(image) {
     this.image = image;
 

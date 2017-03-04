@@ -22,7 +22,9 @@ class SideNav {
 
   applyPassive() {
     if (this.supportsPassive !== undefined) {
-      return this.supportsPassive ? { passive: true } : false;
+      return this.supportsPassive ? {
+        passive: true,
+      } : false;
     }
     // feature detect
     let isSupported = false;
@@ -32,7 +34,7 @@ class SideNav {
           isSupported = true;
         },
       });
-    } catch (e) { } // eslint-disable-line no-empty
+    } catch (e) {} // eslint-disable-line no-empty
     this.supportsPassive = isSupported;
     return this.applyPassive();
   }

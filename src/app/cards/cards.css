@@ -1,12 +1,12 @@
 .card {
   display: flex;
   flex-direction: column;
-  color: rgba(0,0,0,0.87);
-  background-color: rgb(255,255,255);
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(255, 255, 255);
   border-radius: 2px;
   box-sizing: border-box;
   margin: 8px;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
   overflow: hidden;
 }
 
@@ -27,7 +27,7 @@
   padding-top: 100%;
 }
 
-.card .card__rich-media > * {
+.card .card__rich-media>* {
   display: block;
   position: absolute;
   top: 0;
@@ -56,7 +56,7 @@
   padding-bottom: 24px;
 }
 
-.card .card__primary-title > * {
+.card .card__primary-title>* {
   margin: 0;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .card .card__primary-title .card__subtitle {
-  color: rgba(0,0,0,0.54);
+  color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   font-weight: normal;
   margin-top: 8px;
@@ -129,7 +129,7 @@
 }
 
 .card .card__actions .card__action:hover {
-  background-color: rgba(158,158,158,0.2);
+  background-color: rgba(158, 158, 158, 0.2);
 }
 
 .card .card__supporting-text {
@@ -190,7 +190,7 @@
 .card__header-subtitle {
   display: block;
   font-size: 14px;
-  color: rgba(0,0,0,0.54);
+  color: rgba(0, 0, 0, 0.54);
   font-weight: 400;
   letter-spacing: .01em;
   line-height: 24px;
