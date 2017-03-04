@@ -4,7 +4,8 @@
   "description": "Service worker demo",
   "scripts": {
     "test": "eslint ./src &",
-    "start": "http-server -c 0 ./src",
+    "prestart": "npm run sw",
+    "start": "http-server -c-1 ./src",
     "sw": "sw-precache --config=sw-precache.config.js"
   },
   "keywords": [
